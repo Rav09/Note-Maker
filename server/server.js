@@ -9,6 +9,7 @@ const path = require('path')
 mongoose.set('strictQuery', true);
 const app = express()
 app.use(cors())
+app.use(cors({ origin: true }));
 app.use(express.json())
 
 

@@ -16,7 +16,7 @@ export default function EditNote() {
         const getNote = async () => {
             const token = localStorage.getItem('tokenStore');
             if (id) {
-                const res = await axios.get(`/api/notes/${id}`, {
+                const res = await axios.get(`https://note-maker-6rrr.onrender.com/api/notes/${id}`, {
                     headers: { Authorization: token }
                 });
                 setNote({
@@ -45,7 +45,7 @@ export default function EditNote() {
                     title, content, date
                 };
 
-                await axios.put(`/api/notes/${id}`, newNote, {
+                await axios.put(`https://note-maker-6rrr.onrender.com/api/notes/${id}`, newNote, {
                     headers: { Authorization: token }
                 });
 
