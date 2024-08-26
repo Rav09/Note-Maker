@@ -1,6 +1,4 @@
 
-Memory updated
-Here is a README file for your Notemaker website:
 
 Notemaker Website
 Overview
