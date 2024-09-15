@@ -15,13 +15,23 @@ code {
 }
 
 body{
-  background: rgba(32, 25, 62, 0.867);
+  background: linear-gradient(135deg, #2c3e50, #3498db);
 }
+
 .notes-page{
   width: 100%;
   min-height: 100vh;
-  color: rgba(93, 78, 150, 0.378);
+  color: rgba(200, 207, 216, 0.9); /* Lighter color to match */
+  background-color: rgb(32, 32, 48); /* Dark background for contrast */
 }
+
+
+
+/* .notes-page{
+  width: 100%;
+  min-height: 100vh;
+  color: rgba(93, 78, 150, 0.378);
+} */
 .notes-page header{
   max-width: 1920px;
   min-height: 100px;
@@ -31,14 +41,35 @@ body{
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+  background-color: rgb(40, 40, 60); /* Darker header for emphasis */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Added shadow for depth */
+  padding: 15px;
 }
+
+
+/* .notes-page header{
+  max-width: 1920px;
+  min-height: 100px;
+  overflow: hidden;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+} */
 a{
   text-decoration: none;
-  color: rgb(200, 207, 216);
+  color: rgb(200, 207, 216); /* Light text */
+  transition: color 0.3s ease; /* Smooth hover effect */
+}
+a:hover {
+  color: rgb(255, 165, 0); /* Orange hover */
 }
 .notes-page header .logo{
   text-transform: uppercase;
   letter-spacing: 2px;
+  color: rgb(255, 255, 255); /* Bright logo */
+  font-weight: bold;
 }
 .notes-page header ul li{
   list-style: none;
@@ -47,15 +78,19 @@ a{
 }
 .notes-page header ul li a{
   text-transform: uppercase;
-  opacity: 0.7;
+  opacity: 0.8;
+  color: rgb(255, 255, 255); /* Matching header links */
+  font-weight: bold;
 }
 .notes-page header ul li a:hover{
   opacity: 1;
+  color: rgb(255, 165, 0); /* Hover orange */
 }
 .notes-page section{
   width: 100%;
-  box-shadow: 0 0 5px rgb(21, 58, 137);
+  box-shadow: 0 0 10px rgba(21, 58, 137, 0.5); /* Soft shadow for card container */
   padding: 20px 0;
+  background: rgb(40, 40, 60); /* Darker section background */
 }
 .note-wrapper{
   max-width: 1920px;
@@ -66,30 +101,37 @@ a{
 }
 .card{
   width: 300px;
-  box-shadow: 0 0 5px rgb(181, 193, 218);
-  background: rgb(7,25,63);
-  padding: 10px;
+  box-shadow: 0 0 15px rgba(204, 179, 179, 0.5); /* Strong shadow for card depth */
+  background: rgb(50, 50, 80); /* Dark card background */
+  padding: 20px;
   position: relative;
-  color: #ddd;
+  color: rgba(255, 255, 255, 0.9); /* Lighter text */
   margin: 15px;
   cursor: pointer;
+  border-radius: 10px; /* Smooth rounded corners */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+.card:hover{
+  transform: scale(1.09); /* Slight zoom on hover */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8); /* Deeper shadow on hover */
 }
 .card .close{
   position: absolute;
-  top:0;
+  top: 10px;
   right: 10px;
   font-weight: 900;
   cursor: pointer;
   background: transparent;
   border: none;
   outline: none;
-  color: white;
+  color: rgba(255, 255, 255, 0.7);
 }
 .card h4{
   margin-right: 10px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  color: #fff; /* Bright title text */
 }
 .card .text-wrapper{
   width: 100%;
@@ -99,11 +141,11 @@ a{
   -webkit-line-clamp: 7;
   overflow: hidden;
   margin: 10px 0;
-  color: rgba(243, 245, 240, 0.941);
+  color: rgba(243, 245, 240, 0.9); /* Lighter body text */
 }
 .card .date{
   text-align: right;
-  color: rgb(180, 141, 69);
+  color: rgb(255, 165, 0); /* Orange date text */
 }
 .card-footer{
   display: flex;
@@ -114,49 +156,117 @@ a{
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 12px;
+  color: rgb(200, 207, 216); /* Footer text color */
 }
+
+
+
+
+
 /* ******* Create Note******************* */
-.create-note{
+/* .create-note{
   max-width: 500px;
   width: 100%;
   margin: auto;
   border: 10px solid #ccc;
   padding: 30px;
 }
-.create-note h2{
+ */
+
+
+ .create-note {
+  max-width: 500px;
+  width: 100%;
+  margin: auto;
+  border: 2px solid #3498db; /* Matching border with login page colors */
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.9); /* Subtle white background with opacity */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+
+
+.create-note h2 {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 10px 0;
+  color: #2c3e50; /* Dark text for better contrast */
+  text-align: center;
+  font-size: 24px;
+}
+
+
+
+
+/* .create-note h2{
   letter-spacing: 2px;
   text-transform: uppercase;
   margin: 10px 0;
   color: rgb(162, 179, 190);
+} */
+.create-note .row {
+  width: 100%;
+  margin: 15px 0; /* Increased margin for better spacing */
 }
-.create-note .row{
+
+
+
+
+/* .create-note .row{
   width: 100%;
   margin: 10px 0;
-}
+
+} */
+
 .create-note input,
+.create-note button,
+.create-note textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #3498db; /* Border matching the login/register pages */
+  border-radius: 5px; /* Rounded inputs */
+  margin-top: 5px;
+}
+
+
+/* .create-note input,
 .create-note button{
   width: 100%;
   height: 40px;
   padding:  0 5px;
-}
-.create-note label{
+} */
+.create-note label {
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 2px;
-  color: rgb(143, 190, 217);
+  color: #2980b9; /* Matching blue color */
 }
-.create-note textarea{
-  width: 100%;
+.create-note textarea {
   resize: none;
-  padding: 0 5px;
+  padding: 10px;
+  height: 150px;
 }
-.create-note button{
+.create-note button {
   cursor: pointer;
   text-transform: uppercase;
   font-weight: 900;
   letter-spacing: 2px;
-  color: rgb(174, 179, 190);
+  color: #fff; /* White text */
+  background-color: #3498db; /* Blue button */
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
+
+
+
+.create-note button:hover {
+  background-color: #2980b9; /* Darker blue on hover */
+}
+
+
 @media (max-width: 500px){
   .create-note{
     padding: 15px;
@@ -165,37 +275,103 @@ a{
 }
 
 /* *********Login / Register******* */
-.login-page{
+.login-page {
   position: relative;
   width: 100%;
   min-height: 100vh;
+  background: linear-gradient(135deg, #2c3e50, #3498db);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .login input,
 .register input{
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  background: #ecf0f1; /* Light input background */
+  color: #2c3e50;
+  font-size: 16px;
 }
+
+.login input:focus,
+.register input:focus {
+  outline: none;
+  box-shadow: 0 0 5px #3498db; /* Blue shadow on focus */
+  border: 1px solid #3498db;
+}
+
 .login,
 .register{
+  
+
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: rgb(176, 171, 160);
+  background: rgb(193, 218, 225);
 }
+
+
 .login-page h2,
 .login-page h3{
-  color: #fff8;
+
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+ color: #2c3e50; 
 }
 .login-page h3{
-    text-align: center;
-    text-transform: uppercase;
-    margin-top: 15px;
+  text-transform: uppercase;
+  margin-top: 0;
 }
 .login-page p{
   margin: 10px 0;
-  color: white;
+  color: #34495e;
 }
 .login-page span:hover{
-  color: orange;
+  color: rgb(148, 140, 99);
   cursor: pointer;
+}
+
+
+.login button,
+.register button {
+  background: #3498db; /* Blue button background */
+  color: #fff; /* White text */
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login button:hover,
+.register button:hover {
+  background: #2980b9; /* Darker blue on hover */
+}
+
+.login-page span {
+  color: #3498db; /* Blue for the clickable span */
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@media (max-width: 500px) {
+  .login,
+  .register {
+    padding: 20px;
+    max-width: 300px;
+  }
 }
