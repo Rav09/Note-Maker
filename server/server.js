@@ -40,7 +40,9 @@ const URI = process.env.MONGODB_URL
 mongoose.connect(URI, { // useCreateIndex: true,
    // useFindAndModify: false,
     useNewUrlParser: true, 
-    useUnifiedTopology: true })
+    useUnifiedTopology: true,
+   keepAlive: true,
+ serverSelectionTimeoutMS: 5000 })
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.error(err));
 
